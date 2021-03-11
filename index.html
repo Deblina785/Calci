@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<script type="text/javascript">
+		
+		function c(val)
+{
+document.getElementById("d").value=val;
+}
+function v(val)
+{
+document.getElementById("d").value+=val;
+}
+function e() 
+{ 
+try 
+{ 
+  c(eval(document.getElementById("d").value)) 
+} 
+catch(e) 
+{
+  c('Error') 
+} 
+}  
+	</script>
+	</script>
+	<style>
+		.text{
+			margin:10;
+			padding:10;
+
+		}
+		.button{
+			width:70px;
+			height:70px;
+			font-size: 50px;
+			margin: 5px;
+			cursor: pointer;
+			background:red;
+			border: none;
+			color: white;
+
+		}
+		
+		.display
+ 		{
+		background-color:blue;
+		width:256px;
+		position:relative;
+		left:15px;
+		top:20px;
+		height:40px;
+		}
+		.display input
+		{
+		position:absolute;
+		width:320px;
+		left:-35px;
+		top:-2px;
+		height:40px;
+		color:black;
+		background-color:silver;
+		font-size:21px;
+		} 
+		.display{
+			position: absolute;
+			top: 18%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+
+		}
+		.main{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+
+		}
+		
+	</style>
+</head>
+<body bgcolor="linear-gradient(to right,red,blue)">
+	<div class="display"><input type="text"  id="d"></div>
+	<div class="main">
+		
+		
+	<table>
+		<tr>
+			<td><input class="button" type="button" name="btnclr" value="C" onclick='c("")'></td>
+			<td><input class="button" type="button" name="btnbck" value="<" onclick='v("<")'></td>
+			<td><input class="button" type="button" name="btndivide" value="/" onclick='v("/")'></td>
+			<td><input class="button" type="button" name="btnmulti" value="x" onclick='v("*")'></td>
+		</tr>
+		<tr>
+			<td><input class="button" type="button" name="btn7" value="7" onclick='v("7")'></td>
+			<td><input class="button" type="button" name="btn8" value="8" onclick='v("8")'></td>
+			<td><input class="button" type="button" name="btn9" value="9" onclick='v("9")'></td>
+			<td><input class="button" type="button" name="btnminus" value="-" onclick='v("-")'></td>
+		</tr>
+		<tr>
+			<td><input class="button" type="button" name="btn4" value="4" onclick='v("4")'></td>
+			<td><input class="button" type="button" name="btn5" value="5" onclick='v("5")'></td>
+			<td><input class="button" type="button" name="btn6" value="6" onclick='v("6")'></td>
+			<td><input class="button" type="button" name="btnadd" value="+" onclick='v("+")'></td>
+		</tr>
+		<tr>
+			<td><input class="button" type="button" name="btn1" value="1" onclick='v("1")'></td>
+			<td><input class="button" type="button" name="btn2" value="2" onclick='v("2")'></td>
+			<td><input class="button" type="button" name="btn3" value="3" onclick='v("3")'></td>
+			<td rowspan="5"><input class="button" style="height:146px" type="button" value="=" onclick='e()'></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input class="button" style="width: 150px" type="button" value="0" onclick='v("0")'></td>
+			<td><input class="button" type="button" value="." onclick='v(".")'></td>
+	</table>
+	
+
+</div>
+</body>
+</html>
+
